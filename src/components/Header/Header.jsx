@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Header() {
    return (
       <header>
@@ -6,9 +6,20 @@ function Header() {
             <img className='App-logo' alt="" src='https://i0.wp.com/www.genericvan.life/wp-content/uploads/2017/11/GenericVanLife-Logo.png' />
          </Link>
          <nav className='appHeader'>
-            <Link to ="/host">Host</Link>
-            <Link to="/about">About</Link>
-            <Link to="/vans">Vans</Link>
+            <NavLink
+               to="/host"
+               className={(obj) => { return obj.isActive ? "active" : "" }}
+            >Host
+            </NavLink>
+            <NavLink
+               to="/about"
+               className={(obj) => { return obj.isActive ? "active" : "" }}>
+               About
+            </NavLink>
+            <NavLink to="/vans"
+               className={(obj) => { return obj.isActive ? "active" : "" }}>
+               Vans
+            </NavLink>
          </nav>
       </header>
    );
