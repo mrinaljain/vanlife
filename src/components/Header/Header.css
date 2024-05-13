@@ -1,0 +1,39 @@
+header {
+   height: 110px;
+   display: flex;
+   align-items: center;
+   padding-block: 10px;
+}
+
+header .site-logo {
+   margin-right: auto;
+}
+
+header .site-logo img {
+   height: 100px;
+}
+
+header a {
+   text-decoration: none;
+   color: #4D4D4D;
+   font-weight: 600;
+   padding: 5px 20px;
+}
+
+header a:hover {
+   color: #161616;
+   text-decoration: underline;
+}
+
+.appHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0px 30px;
+}
+
+.appHeader a.active {
+   font-weight: bold;
+   text-decoration: underline;
+   color: #161616;
+}
